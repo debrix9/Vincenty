@@ -9,7 +9,8 @@ namespace vincenty
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Vincenty calculator running");
+            serverMain.serverRun();
+            
             coord startingPos = new coord();
             coord finalPos = new coord();
             double bearing = 30.0;
