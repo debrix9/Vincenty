@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vincenty Visualizer</title>
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="leftPanel">
+    <h2>Vincenty Visualizer</h2>
+    
+    <div class="switch-container">
+      <label class="switch">
+        <input type="checkbox" id="inputModeSwitch" />
+        <span class="slider"></span>
+      </label>
+      <span class="switch-label" id="switchLabel">Direct Problem</span>
+    </div>
+
+    <div class="input-group">
+      <div class="input-pair">
+        <input
+          type="number"
+          id="latitude"
+          name="latitude"
+          min="0"
+          max="90"
+          step="0.0001"
+          placeholder="Latitude 00.000"
+          required
+        />
+        <select id="latDir" name="latDir" required>
+          <option value="N">N</option>
+          <option value="S">S</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="input-group">
+    <div class="input-pair">
+      <input
+        type="number"
+        id="longitude"
+        name="longitude"
+        min="0"
+        max="180"
+        step="0.0001"
+        placeholder="Longitude 000.000"
+        required
+      />
+      <select id="lonDir" name="lonDir" required>
+        <option value="E">E</option>
+        <option value="W">W</option>
+      </select>
+    </div>
+  </div>
+
+    <button id="generateBtn">Generate</button>
+  </div>
+
+  <div id="map" style="height: 100vh;"></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
